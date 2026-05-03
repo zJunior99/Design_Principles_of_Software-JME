@@ -1,25 +1,40 @@
-# go-solid-order-system
+# Software Design Principles in Go
 
-[![CI](https://github.com/zJunior99/Design_Principles_of_Software-JME/actions/workflows/ci.yml/badge.svg)](https://github.com/zJunior99/Design_Principles_of_Software-JME/actions/workflows/ci.yml)
-[![Go Version](https://img.shields.io/badge/Go-1.22-blue.svg)](https://golang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Demonstration project for the article **"Software Design Principles in Go: Building Code That Lasts"** published on Medium.
 
-Repositorio de ejemplo para el artículo **"Principios de Diseño de Software en Go: Construyendo Código que Dura"** publicado en Medium.
+Implements the **SOLID** principles applied to an e-commerce order processing system.
 
-Implementa los principios **SOLID** aplicados a un sistema de procesamiento de pedidos de e-commerce.
+## Requirements
 
----
+- Go 1.23 or higher
 
-## 📐 Principios demostrados
+## Run
 
-| Principio | Dónde verlo |
-|-----------|------------|
-| **S** — Single Responsibility | `internal/service`, `internal/discount`, `internal/notifier` |
-| **O** — Open/Closed | `internal/discount/discount.go` (Strategy pattern) |
-| **L** — Liskov Substitution | `internal/notifier/notifier.go` (Email, SMS, Multi) |
-| **I** — Interface Segregation | `internal/repository/repository.go` (Reader/Writer) |
-| **D** — Dependency Inversion | `internal/service/order_service.go` (DI via interfaces) |
+```bash
+go run ./cmd/...
+```
 
----
+## Test
 
+```bash
+go test ./... -v
+```
 
+## Project Structure
+
+├── cmd/                  # Entry point
+├── internal/
+│   ├── domain/           # Order entity
+│   ├── service/          # Business logic
+│   ├── discount/         # Discount strategies (OCP)
+│   ├── notifier/         # Notification channels (LSP)
+│   ├── repository/       # Data interfaces (ISP)
+│   └── logger/           # Logging abstraction (DIP)
+└── .github/workflows/    # CI/CD pipeline
+
+## Article
+
+[Software Design Principles in Go: Building Code That Lasts]
+(https://medium.com/@jm2022075474/software-design-principles-in-go-building-code-that-lasts-2d86847d166b)
+
+### Estudiante: Junior Mamani Estaña
