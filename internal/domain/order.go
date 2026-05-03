@@ -27,7 +27,7 @@ type OrderItem struct {
 type OrderStatus string
 
 const (
-	StatusPending    OrderStatus = "pending"
-	StatusProcessed  OrderStatus = "processed"
-	StatusCancelled  OrderStatus = "cancelled"
+	StatusPending   OrderStatus = "pending"
+	StatusProcessed OrderStatus = "processed"
+	StatusCancelled OrderStatus = "cancelled"
 )

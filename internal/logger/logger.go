@@ -44,7 +44,7 @@ func (l *ConsoleLogger) log(level, msg string, args ...any) {
 // NoOpLogger descarta todos los mensajes. Ideal para pruebas unitarias.
 type NoOpLogger struct{}
 
-func NewNoOpLogger() *NoOpLogger         { return &NoOpLogger{} }
+func NewNoOpLogger() *NoOpLogger               { return &NoOpLogger{} }
 func (n *NoOpLogger) Info(_ string, _ ...any)  {}
 func (n *NoOpLogger) Warn(_ string, _ ...any)  {}
 func (n *NoOpLogger) Error(_ string, _ ...any) {}
