@@ -19,9 +19,10 @@ go run ./cmd/...
 ```bash
 go test ./... -v
 ```
-
+cl
 ## Project Structure
 
+```
 ├── cmd/                  # Entry point
 ├── internal/
 │   ├── domain/           # Order entity
@@ -31,6 +32,7 @@ go test ./... -v
 │   ├── repository/       # Data interfaces (ISP)
 │   └── logger/           # Logging abstraction (DIP)
 └── .github/workflows/    # CI/CD pipeline
+```
 
 ## Article
 
